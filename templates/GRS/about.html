@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+About GRS
+{% endblock title %}
+
+{% block aboutactive %}
+active
+{% endblock aboutactive %}
+
+{% block css %}
+#banner{
+    background-image:url('{% static 'images/about_banner.jpg'%}');
+        background-size:cover;
+        
+        background-repeat:no-repeat;
+}
+
+.content{
+    max-height:200px;
+    overflow:hidden;
+}
+
+{% endblock css %}
+
+{% block csslink %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock csslink %}j
+
+{% block jslink %}
+
+{% endblock jslink %}
+
+{% block body %}
+
+<div class="d-flex" id="banner" style="width:100%;height:100vh;">
+        <div class="content text-danger h1 m-auto w-50 container">
+            We are 
+            <span class="text-primary">happy</span>
+             to provide you with the most 
+             <span class="text-primary">relable</span>
+              <span class="text-primary">reviews</span>
+               on all gadgets <br>
+            <a class="btn btn-primary w-100" href="#meetus"> Meet US</a>
+        </div>     
+</div>
+
+
+<div id="meetus">
+
+        <div class="d-flex bg-info w-100 h-50 mt-5">
+            <div>
+            <img src="{% static 'images/bala_uday_kiran.jpg' %}" alt="Img Not Found" class="rounded-circle border border-double-line py-3 px-3 mx-5 my-4" style="height:250px; width:250px;">
+            <h2 class="text-warning" style="padding-left:125px;">Uday</h2>
+            </div>
+            <div class="content border-left border-warning container m-auto h4 text-light">
+            Font Awesome icon integration and GRS app backend development and a small amount of contribution to 
+            comment section of mobiles and laptops.<br>
+            <span class="text-danger">technologies used :</span> Bootstrap , FontAwesome ,Django etc...
+
+            </div>
+        </div>
+
+
+
+            <div class="d-flex bg-info w-100 h-50 mt-5">
+                <div class="content border-right border-warning container m-auto h4 text-light">
+                Frontend  UI design and loading model data into static django templates.
+                Integration of I am not a robot feature to our GRS app.<br>
+                <span class="text-danger">technologies used :</span> Bootstrap , Django , Google API like i'm not a bot etc...
+                </div>
+                <div>
+                <img src="{% static 'images/hemath.jpg' %}" alt="Img Not Found" class="rounded-circle border border-double-line py-3 px-3 mx-5 my-4" style="height:250px; width:250px;">
+                <h2 class="text-warning  mx-5 px-5">Hemanth</h2>
+                </div>
+            </div>
+
+
+            <div class="d-flex bg-info w-100 h-50 mt-5">
+                <div>
+                <img src="{% static 'images/praveen.jpg' %}" alt="Img Not Found" class="rounded-circle border border-double-line py-3 px-3 mx-5 my-4" style="height:250px; width:250px;">
+                <h2 class="text-warning  mx-5 px-5">Praveen</h2>
+                </div>
+                <div class="content border-left border-warning container m-auto h4 text-light">
+                    Most of the backend part like handling the views and models according to the 
+                    auth state.Basic url layout of the GRS app and Email sending , Google Chats etc...
+                    <br> <span class="text-danger">technologies used :</span> Google API's, Ajax ,Django etc...
+                </div>
+            </div>
+
+
+
+            <div class="d-flex bg-info w-100 h-50 mt-5">
+                <div class="content border-right border-warning container m-auto h4 text-light">
+                Django Backend and Model Data Collection along with model related queries.
+                Apart of Ajax related views and requests along with javascript backend.
+                <br> <span class="text-danger">technologies used :</span> Django, Ajax, Javascript etc...
+                </div>
+                <div>
+                <img src="{% static 'images/dinesh.jpg' %}" alt="Img Not Found" class="rounded-circle border border-double-line py-3 px-3 mx-5 my-4" style="height:250px; width:250px;">
+                <h2 class="text-warning  mx-5 px-5">Dinesh</h2>
+                </div>
+            </div>
+
+
+            <div class="d-flex bg-info w-100 h-50 mt-5">
+                <div>
+                <img src="{% static 'images/praneeth.jpg' %}" alt="Img Not Found" class="rounded-circle border border-double-line py-3 px-3 mx-5 my-4" style="height:250px; width:250px;">
+                <h2 class="text-warning  mx-5 px-5">Praneeth</h2>
+                </div>
+                <div class="content border-left border-warning container m-auto h4 text-light">
+                UI state handling with jquery backend and intergration of ajax jquery backend to the make 
+                ajax requests.
+                Worked on glue layer of FrontEnd and Backend.
+                <br><span class="text-danger">technologies used :</span> Django, Ajax, Jquery etc...
+                </div>
+            </div>
+
+
+
+            <div class="d-flex bg-info w-100 h-50 mt-5">
+                <div class="content border-right border-warning container m-auto h4 text-light">
+                Random data and information collections for the backend.
+                Populating the charts with given random data.
+                Testing the relability of the app on auth state.
+                <br><span class="text-danger">technologies used :</span> Django Models, Model Queries,FrontEnd etc...
+                </div>
+                <div>
+                <img src="{% static 'images/ajay.jpg' %}" alt="Img Not Found" class="rounded-circle border border-double-line py-3 px-3 mx-5 my-4" style="height:250px; width:250px;">
+                <h2 class="text-warning" style="padding-left:125px;">Ajay</h2>
+                </div>
+            </div>
+
+
+</div>
+
+
+{% endblock body %}
+
+{% block updisplay %}
+d-none
+{% endblock updisplay %}
+
+{% block js %}
+
+{% endblock js %}
+

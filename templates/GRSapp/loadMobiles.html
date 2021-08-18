@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+MOBILES PAGE
+{% endblock title %}
+
+
+{% block csslink %}
+<link rel="stylesheet" href="{% static 'css/loadMobiles.css' %}"/>
+{% endblock csslink %}
+
+
+{% block body %}
+    {% if mobiles %}
+        {% for mobile in mobiles %}
+            <div class="mobile-viewer mt-1 mb-1 container">
+                <button class="btn btn-primary btn-lg btn-block text-left d-flex justify-content-between" data-toggle="collapse" data-target="#mobile{{forloop.counter}}">
+                {{mobile}}
+                <div class="rating d-flex">
+                    <div class="stars">
+                        {% for i in mobile.rating %}
+                            {% ifnotequal  i  '0' %}
+                            <span class="fa fa-star checked"></span>
+                            {% else %}
+                            <span class="fa fa-star"></span>
+                            {% endifnotequal %}
+                        {% endfor %}
+                    </div>
+                    <div class="hearts pl-3 ">
+                       <i class="fa fa-heart" aria-hidden="true"></i>&nbsp;{{mobile.hearts}}&nbsp;
+                    </div>
+                </div>
+                </button>
+                <div class="collapse  " id="mobile{{forloop.counter}}">
+                    <div class="card card-body">
+                            <ul class="list-items">
+                                    <li class="list-group-item"><span class="text-success">Brand Name : </span> <span class="text-warning">{{mobile.brandname}}</span></li>
+                                    <li class="list-group-item"><span class="text-success">Model Name : </span> <span class="text-warning">{{mobile.modelname}}</span></li>
+                                    <li class="list-group-item"><span class="text-success">Battery Capacity : </span> <span class="text-warning">{{mobile.battery_cap}} MAH</span></li>
+                                    <li class="list-group-item"><span class="text-success">Internal Storage : </span> <span class="text-warning">{{mobile.internal_mem}} GB</span></li>
+                                    <li class="list-group-item"><span class="text-success">Front Camera Pixels : </span> <span class="text-warning">{{mobile.front_cam}} pixels</span></li>
+                                    <li class="list-group-item"><span class="text-success">Back Camera Pixels : </span> <span class="text-warning">{{mobile.back_cam}} pixels</span></li>
+                                    <li class="list-group-item"><span class="text-success">Display Size : </span> <span class="text-warning">{{mobile.display}} inches</span></li>
+                                    <li class="list-group-item"><span class="text-success">RAM : </span> <span class="text-warning">{{mobile.ram}} GB</span></li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div class="item-price">
+                                            <span class="text-success">
+                                                Price : 
+                                            </span> 
+                                            <span class="text-warning">
+                                            {{mobile.price}} /-
+                                            </span>
+                                        </div>
+                                        <div class="link-mobileview">
+                                            <button class="btn btn-primary" onclick="location.href='mobiles/{{mobile.id}}'">View</button>
+                                        </div>
+                                    </li>
+                            </ul>
+
+                             <div class="mob-image text-center p-2 ">
+                                <img src="/media/{{mobile.mob_pic}}"  alt="Image not Found" class="img"/>
+                            </div>
+                       
+                    </div>
+                   
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock body %}
+
+
+
+
+
